@@ -5,20 +5,15 @@
   "author": "Ryan Knights",
   "license": "MIT",
   "dependencies": {
-    "less": "^2.7.2",
-    "less-loader": "^4.0.5",
-    "lodash.throttle": "^4.1.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ryanknights/Vue-Responsive-Tabs-Accordion"
-  },
-  "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
     "react-scripts": "1.0.16",
     "redux": "^3.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanknights/Vue-Responsive-Tabs-Accordion"
   },
   "scripts": {
     "start": "react-scripts start",

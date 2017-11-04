@@ -12,22 +12,31 @@ import TodoSummary from './TodoSummary';
 class App extends Component {
   render() {
     return (
-      <div>
-        <TodoSummary
-          todos={this.props.todos}
-        />
-        <TodoFilter 
-          toggle={this.props.setVisibilityFilter}
-          current={this.props.filter}
-        />
-        <AddTodo 
-          add={this.props.addTodo} 
-        />
-        <TodoList 
-          todos={getVisibleTodos(this.props.todos, this.props.filter)} 
-          toggle={this.props.toggleTodo}
-          remove={this.props.removeTodo}
-        />
+      <div className="app mt-4">
+        <div className="container">
+          <h1>React &amp; Redux Todo App</h1>
+          <div className="row">
+            <div className="col-md-8">
+              <AddTodo 
+                add={this.props.addTodo} 
+              />
+              <TodoList 
+                todos={getVisibleTodos(this.props.todos, this.props.filter)} 
+                toggle={this.props.toggleTodo}
+                remove={this.props.removeTodo}
+              />              
+            </div>
+            <div className="col-md-4">
+              <TodoSummary
+                todos={this.props.todos}
+              />
+              <TodoFilter 
+                toggle={this.props.setVisibilityFilter}
+                current={this.props.filter}
+              />
+            </div>
+          </div>        
+        </div>
       </div>
     );
   }

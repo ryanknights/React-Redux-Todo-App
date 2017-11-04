@@ -7,12 +7,17 @@ class TodoFilter extends Component {
     let incomplete = this.props.todos.filter(todo => !todo.completed).length;
     let percentage = (complete / all) * 100;
     return (
-      <ul>
-        <li>Todos: <strong>{all}</strong></li>
-        <li>Complete: <strong>{complete}</strong></li>
-        <li>Complete: <strong>{incomplete}</strong></li>
-        <li>{!isNaN(percentage)? `${percentage.toFixed(2)}% complete` : 'N/A'}</li>
-      </ul>
+      <div className="card mb-4">
+        <div className="card-header">Summary</div>
+        <div className="card-body">
+          <ul>
+            <li>Todos: <strong>{all}</strong></li>
+            <li>Complete: <strong>{complete}</strong></li>
+            <li>Incomplete: <strong>{incomplete}</strong></li>
+            <li>{!isNaN(percentage)? `${percentage.toFixed(2)}% Complete` : 'N/A'}</li>
+          </ul>
+        </div>
+      </div>
     );
   }
 }

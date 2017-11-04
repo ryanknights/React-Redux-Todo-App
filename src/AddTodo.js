@@ -3,15 +3,24 @@ import React, { Component } from 'react';
 class AddTodo extends Component {
   constructor(props) {
     super(props);
-
     this.state = {text: ''}
   }
   render() {
     return (
-      <div>
+      <div className="mb-4">
         <form onSubmit={this.addTodo.bind(this)}>
-          <input type="text" onChange={event => this.setState({text: event.target.value})} value={this.state.text} />
-          <button type="submit">Add Todo</button>
+          <div className="input-group input-group-lg">
+            <input 
+              type="text" 
+              onChange={event => this.setState({text: event.target.value})} 
+              value={this.state.text} 
+              className="form-control" 
+              placeholder="Something I need to do...."
+            />
+            <span className="input-group-btn">
+              <button className="btn btn-primary" type="submit">Add</button>
+            </span>           
+          </div>
         </form>
       </div>
     );
