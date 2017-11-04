@@ -31,7 +31,7 @@ class App extends Component {
                 todos={this.props.todos}
               />
               <TodoFilter 
-                toggle={this.props.setVisibilityFilter}
+                toggle={this.props.setFilter}
                 current={this.props.filter}
               />
             </div>
@@ -73,7 +73,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    setVisibilityFilter: setVisibilityFilter,
+    setFilter: setVisibilityFilter,
     addTodo: addTodo,
     toggleTodo: toggleTodo,
     removeTodo: removeTodo
